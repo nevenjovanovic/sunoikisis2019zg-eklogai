@@ -30,16 +30,18 @@ The BaseX scripts are in [scripts](https://github.com/nevenjovanovic/sunoikisis2
 
 ### Analyze the collection
 
-1. Create a list of lemmata: [findLemma.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/findLemma.xq)
-2. Create a list of lemmata, order by frequency: [findLemmaFrequency.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/findLemmaFrequency.xq)
-3. Narrow the list to lemmata whose forms occur at least twice (and exclude punctuation): [findLemmaFrequencyTwoPlus.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/findLemmaFrequencyTwoPlus.xq)
+1. For a given lemma, get a list of forms and POS tags in the collection: [forLemmaGetFormPOStag.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/forLemmaGetFormPOStag.xq)
+2. Create a list of lemmata: [findLemma.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/findLemma.xq)
+3. Create a list of lemmata, order by frequency: [findLemmaFrequency.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/findLemmaFrequency.xq)
+4. Narrow the list to lemmata whose forms occur at least twice (and exclude punctuation): [findLemmaFrequencyTwoPlus.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/findLemmaFrequencyTwoPlus.xq)
+5. Explore frequencies of linguistic annotations: [getFrequenciesAttributes.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/getFrequenciesAttributes.xq) (lemma, form, postag)
 
 ### From repeated lemmata to Anki exercises
 
 1. For lemmata where f >= 2, get a list of occurring forms: [fromLemmaToForms.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/fromLemmaToForms.xq)
 2. For a pair of form and lemma, produce an Anki exercise: [fromLemmaToAnki.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/fromLemmaToAnki.xq)
 3. Narrow to a specific number of occurrences: [fromLemmaToAnkiNarrowNumber.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/fromLemmaToAnkiNarrowNumber.xq)
-4. Narrow to specific types of words (e. g. just inflected words: nouns, verbs, adjectives, pronouns)
+4. Narrow to specific types of words (e. g. just inflected words: nouns, verbs, adjectives, pronouns): [fromLemmaToAnkiNarrowMorphology.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/fromLemmaToAnkiNarrowMorphology.xq)
 
 Here [a list of codes / attributes used for Greek in Arethusa](https://github.com/alpheios-project/arethusa-configs/blob/master/configs/arethusa.morph/gr_attributes.json) is quite helpful.
 

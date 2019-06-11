@@ -56,8 +56,8 @@ Here [a list of codes / attributes used for Greek in Arethusa](https://github.co
 
 ### From vocabulary to the DCC Greek list
 
-1. Create a DCC Greek list as a BaseX database
-2. Find all DCC lemmata occurring in our texts
+1. Create a DCC Greek list as a BaseX database `grclatcore`: [createDbGrcLatCore.xq]()
+2. Find all DCC lemmata occurring in our texts: [findWordsInDCCore.xq]()
 3. Produce a set of Anki exercises for these lemmata
 
 ## Anki

@@ -6,18 +6,21 @@ A [Sunoikisis Digital Classics Session](https://github.com/SunoikisisDC/Sunoikis
 
 ## Synopsis
 
-Demonstrate how to use BaseX and XQuery to produce Anki exercises from a set of morphologically annotated and lemmatized short texts in Greek. 
+Demonstrate how to use [BaseX](http://basex.org/) and [XQuery](https://en.wikibooks.org/wiki/XQuery) to produce Anki spaced repetition vocabulary exercises from a set of morphologically annotated and lemmatized short texts in Greek. 
 
-Concentrate on reoccurring words, and on words which are very frequent in Greek (according to the Dickinson College Core Vocabulary list).
+Concentrate on reoccurring words, and on words which are very frequent in Greek (according to the [Dickinson College Core Vocabulary](http://dcc.dickinson.edu/vocab/core-vocabulary) list).
 
 Produce two types of exercises: 
 
-1. from the form to the lemma
-2. from the form to the grammatical description
+1. from the form to the **lemma**
+2. from the form to the **grammatical description**
+3. from words in the text to entries in the [DC Greek Core vocabulary list](http://dcc.dickinson.edu/greek-core-list-romanian) (Croatian version, converted to XML)
 
 ## How to use
 
 The Greek texts, annotated in [Arethusa (on Perseids)](https://www.perseids.org/tools/arethusa/app/#/), are in [data](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/tree/master/data) directory.
+
+The Croatian translation of Greek and Latin DC Core lists, converted to XML with some additional fields, is in [grclatcore](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/tree/master/scripts)
 
 The BaseX scripts are in [scripts](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/tree/master/scripts).
 
@@ -56,8 +59,8 @@ Here [a list of codes / attributes used for Greek in Arethusa](https://github.co
 
 ### From vocabulary to the DCC Greek list
 
-1. Create a DCC Greek list as a BaseX database `grclatcore`: [createDbGrcLatCore.xq]()
-2. Find all DCC lemmata occurring in our texts: [findWordsInDCCore.xq]()
+1. Create a DCC Greek list as a BaseX database `grclatcore`: [createDbGrcLatCore.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/createDbGrcLatCore.xq)
+2. Find all DCC lemmata occurring in our texts: [findWordsInDCCore.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/findWordsInDCCore.xq)
 3. Produce a set of Anki exercises for these lemmata
 
 ## Anki

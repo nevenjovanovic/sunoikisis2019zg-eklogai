@@ -10,7 +10,7 @@ Demonstrate how to use [BaseX](http://basex.org/) and [XQuery](https://en.wikibo
 
 Concentrate on reoccurring words, and on words which are very frequent in Greek (according to the [Dickinson College Core Vocabulary](http://dcc.dickinson.edu/vocab/core-vocabulary) list).
 
-Produce two types of exercises: 
+Produce three types of exercises: 
 
 1. from the form to the **lemma**
 2. from the form to the **grammatical description**
@@ -49,19 +49,19 @@ Here [a list of codes / attributes used for Greek in Arethusa](https://github.co
 2. Get frequency of morphological configurations: [findPOStagFrequency.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/findPOStagFrequency.xq)
 3. Select only POS tags for inflected forms, select frequent configurations (e. g. where f >= 14): [findPOStagInflectedFrequency.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/findPOStagInflectedFrequency.xq)
 4. For a set of POS tags, get forms, lemma, POS: [retrievePOS.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/retrievePOS.xq)
-5. Produce Anki exercises requesting the lemma and description of a given form
+5. Produce Anki exercises asking for the lemma and morphological description of a given form: [retrievePOSmapToWords.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/retrievePOSmapToWords.xq) (with Arethusa / Alpheios morphological codes expanded)
 
-### From one text to vocabulary reocurring in other texts
+### From one text to vocabulary reoccurring in other texts
 
 1. Get vocabulary of one text: [vocabularyOneText.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/vocabularyOneText.xq)
 2. Find lemmata reoccurring in other texts: [vocabularyRepeatedInOtherTexts.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/vocabularyRepeatedInOtherTexts.xq)
-3. Prepare Anki exercises for such lemmata
+3. Prepare Anki exercises for such lemmata: [vocabularyRepeatedInOtherTexts.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/vocabularyRepeatedInOtherTexts.xq)
 
 ### From vocabulary to the DCC Greek list
 
 1. Create a DCC Greek list as a BaseX database `grclatcore`: [createDbGrcLatCore.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/createDbGrcLatCore.xq)
 2. Find all DCC lemmata occurring in our texts: [findWordsInDCCore.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/findWordsInDCCore.xq)
-3. Produce a set of Anki exercises for these lemmata
+3. Produce a set of Anki exercises for these lemmata: [DCCoreToAnki.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/DCCoreToAnki.xq)
 
 ## Anki
 

@@ -72,7 +72,7 @@ Form of exercises to be imported into Anki:
 ```csv
 
 word ; translation ; tag
-αὐτός αὐτή αὐτό ; on; isti ; grmorf01
+αὐτός αὐτή αὐτό ; on, isti ; grmorf01
 καί ; i ; grmorf01
 δέ ; a ; grmorf01
 οὗτος αὕτη τοῦτο ; ovaj ; grmorf01

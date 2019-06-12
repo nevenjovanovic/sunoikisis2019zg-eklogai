@@ -26,7 +26,8 @@ The BaseX scripts are in [scripts](https://github.com/nevenjovanovic/sunoikisis2
 
 ## Activities
 
-1. Create the database: [createDbGreek.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/createDbGreek.xq)
+1. Create the main database `sunGreek` with linguistically annotated Greek texts: [createDbGreek.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/createDbGreek.xq)
+2. Create a DCC Greek list (with Croatian translations) as a BaseX database `grclatcore`: [createDbGrcLatCore.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/createDbGrcLatCore.xq)
 
 ### Analyze the collection
 
@@ -61,25 +62,28 @@ Here [a list of codes / attributes used for Greek in Arethusa](https://github.co
 
 ### From vocabulary to the DCC Greek list
 
-1. Create a DCC Greek list as a BaseX database `grclatcore`: [createDbGrcLatCore.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/createDbGrcLatCore.xq)
-2. Find all DCC lemmata occurring in our texts: [findWordsInDCCore.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/findWordsInDCCore.xq)
-3. Produce a set of Anki exercises for these lemmata: [DCCoreToAnki.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/DCCoreToAnki.xq)
+1. Find all DCC lemmata occurring in our texts: [findWordsInDCCore.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/findWordsInDCCore.xq)
+2. Produce a set of Anki exercises for these lemmata: [DCCoreToAnki.xq](https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai/blob/master/scripts/DCCoreToAnki.xq)
 
 ## Anki
 
-About the program: [Anki](https://apps.ankiweb.net/)
+About the program: [the Anki User Manual](https://apps.ankiweb.net/docs/manual.html)
 
-Form of exercises to be imported into Anki:
+Form of exercises to be imported into Anki (no field names necessary; the "tag" field can be omitted):
 
 ```csv
 
-word ; translation ; tag
+question ; answer ; tag
 αὐτός αὐτή αὐτό ; on, isti ; grmorf01
 καί ; i ; grmorf01
 δέ ; a ; grmorf01
 οὗτος αὕτη τοῦτο ; ovaj ; grmorf01
 
 ```
+
+The results of BaseX scripts (`...ToAnki`) can be saved as text files (extension is not important), edited in a text editor (recommended, but just for pedagogical reasons -- to select what we want to teach and learn), and then imported into the Anki database (File / Import).
+
+For better control, it is recommended to first add new user to Anki (Add / Open on the welcome screen).
 
 ## License
 

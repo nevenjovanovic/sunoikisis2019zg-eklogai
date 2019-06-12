@@ -4,6 +4,11 @@ Authors: [Neven Jovanović](orcid.org/0000-0002-9119-399X), Petar Soldo, Departm
 
 A [Sunoikisis Digital Classics Session](https://github.com/SunoikisisDC/SunoikisisDC-2018-2019/wiki/Summer2019-Session11), Summer 2019
 
+
+
+[![DOI](https://zenodo.org/badge/191150132.svg)](https://zenodo.org/badge/latestdoi/191150132)
+
+
 ## Synopsis
 
 Demonstrate how to use [BaseX](http://basex.org/) and [XQuery](https://en.wikibooks.org/wiki/XQuery) to produce Anki spaced repetition vocabulary exercises from a set of morphologically annotated and lemmatized short texts in Greek. 

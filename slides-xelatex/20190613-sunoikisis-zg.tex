@@ -54,9 +54,9 @@ Add morphological descriptions of lemmatized words (parts of speech)
 
 \begin{frame}{XML manipulation}
 
-Reorder words by form, lemma, part of speech
+\alert{Reorder} words by form, lemma, part of speech
 
-Regroup words by forms, lemmata, parts of speech
+\alert{Regroup} words by forms, lemmata, parts of speech (a group is a set of identical forms, identical lemmata etc; from it we get information about frequency of an item in the collection)
 
 Analyze frequencies, retrieve reoccurring forms, lemmata, parts of speech
 
@@ -64,15 +64,44 @@ Select certain forms, lemmata, parts of speech
 
 \end{frame}
 
-\begin{frame}{Vocabulary learning}
+\begin{frame}{XML manipulation, common tasks}
 
-Spaced repetition: we tend to remember things more effectively if we spread reviews out over time, instead of studying multiple times in one session.
+Retrieve all forms from a text (but not punctuation)
+
+For a form, retrieve lemma: πράξεις $\rightarrow$ πρᾶξις
+
+For a form, retrieve part of speech information: \\
+πράξεις $\rightarrow$ \texttt{n - p - - - fa -}
+
+
+\end{frame}
+
+\begin{frame}{XML manipulation, common tasks}
+
+For a lemma, find whether it occurs in other texts, or in another database (DC Greek Core)
+
+For a lemma, retrieve form in a text
+
+For a lemma, retrieve (Croatian) meaning from a lexical database (DC Greek Core)
+
+
+\end{frame}
+
+\begin{frame}{XML manipulation, common tasks}
+
+Format results for import into Anki, our vocabulary learning program (a simple three-fields CSV is needed)
 
 \end{frame}
 
 \begin{frame}{Vocabulary learning}
 
-\alert{Make your own cards}
+\alert{Spaced repetition}: we tend to remember things more effectively if we spread reviews out over time, instead of studying multiple times in one session.
+
+\end{frame}
+
+\begin{frame}{Vocabulary learning}
+
+\alert{Make your own cards!}
 
 The act of making the card helps you remember the stuff on it.
 
@@ -97,6 +126,14 @@ BaseX / XQuery
 \begin{frame}{Spaced repetition}
 
 Anki
+
+\end{frame}
+
+\begin{frame}{Frequent words in (classical) Greek and Latin}
+
+\alert{Dickinson College Core Vocabulary}
+
+``The DCC Core Vocabulary lists represent the thousand most common words in Latin and the 500 most common words in ancient Greek. They were originally composed in 2012–13 by a team at Dickinson College led by \alert{Christopher Francese}. The lists are downloadable in various formats and licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.''
 
 \end{frame}
 

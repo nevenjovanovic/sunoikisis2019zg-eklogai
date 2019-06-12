@@ -5,7 +5,7 @@
 \setotherlanguage[variant=ancient]{greek}
 
 \usepackage{fontspec}
-\usepackage{verse}
+%\usepackage{listings}
 \usepackage{tabto}
 \defaultfontfeatures{Ligatures=TeX}
 %\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
@@ -13,6 +13,7 @@
 \hypersetup{colorlinks,linkcolor=,urlcolor=links}
 \usetheme[numbering=none]{metropolis}           % Use metropolis theme
 \setsansfont{Kyrtos}
+\setmonofont{FreeMono}
 \hyphenation{me-mo-ra-bi-li-um}
 \title{From Annotated Text to Vocabulary Exercises}
 \subtitle{Sunoikisis Digital Classics, Summer 2019}
@@ -36,15 +37,25 @@
 
 \section{The task}
 
-\begin{frame}{The task}
+\begin{frame}{The background}
 
-Use the set of annotated Greek texts to learn its vocabulary.
+A Greek reader for the first-year students: 60 short texts, commented and cued to the standard school grammar.
+
+The students should master the vocabulary from these texts.
 
 \end{frame}
 
-\section{Materials and methods}
+\begin{frame}{The task}
 
-\begin{frame}{Linguistic annotation}
+Annotate our selection of Greek texts morphologically, lemmatize all words.
+
+Use that set of texts to (semi-automatically) produce vocabulary exercises.
+
+\end{frame}
+
+\section{Methods, materials, tools}
+
+\begin{frame}{Methods: linguistic annotation}
 
 Lemmatize words in a text
 
@@ -52,7 +63,21 @@ Add morphological descriptions of lemmatized words (parts of speech)
 
 \end{frame}
 
-\begin{frame}{XML manipulation}
+\begin{frame}[fragile]
+
+\begin{scriptsize}
+\begin{verbatim}
+
+<word id="3" form="παῖς" lemma="παῖς" postag="n-s---mn-"/>
+<word id="4" form="ὢν" lemma="εἰμί" postag="v-sppamn-"/>
+<word id="5" form="ὁμολογεῖται" lemma="ὁμολογέω" postag="v3spie---"/>
+
+\end{verbatim}
+\end{scriptsize}
+
+\end{frame}
+
+\begin{frame}{Methods: XML manipulation}
 
 \alert{Reorder} words by form, lemma, part of speech
 
@@ -64,7 +89,7 @@ Select certain forms, lemmata, parts of speech
 
 \end{frame}
 
-\begin{frame}{XML manipulation, common tasks}
+\begin{frame}{Methods: XML manipulation, common tasks}
 
 Retrieve all forms from a text (but not punctuation)
 
@@ -76,7 +101,7 @@ For a form, retrieve part of speech information: \\
 
 \end{frame}
 
-\begin{frame}{XML manipulation, common tasks}
+\begin{frame}{Methods: XML manipulation, common tasks}
 
 For a lemma, find whether it occurs in other texts, or in another database (DC Greek Core)
 
@@ -87,19 +112,21 @@ For a lemma, retrieve (Croatian) meaning from a lexical database (DC Greek Core)
 
 \end{frame}
 
-\begin{frame}{XML manipulation, common tasks}
+
+
+\begin{frame}{Methods: XML manipulation, common tasks}
 
 Format results for import into Anki, our vocabulary learning program (a simple three-fields CSV is needed)
 
 \end{frame}
 
-\begin{frame}{Vocabulary learning}
+\begin{frame}{Methods: Vocabulary learning}
 
 \alert{Spaced repetition}: we tend to remember things more effectively if we spread reviews out over time, instead of studying multiple times in one session.
 
 \end{frame}
 
-\begin{frame}{Vocabulary learning}
+\begin{frame}{Methods: Vocabulary learning}
 
 \alert{Make your own cards!}
 
@@ -109,27 +136,53 @@ The way you learn and the things you care about are unique to you.
 
 \end{frame}
 
+\begin{frame}{Methods: Sharing research}
+
+To distribute our work, we used a popular version control system and a popular software development platform.
+
+\end{frame}
+
+\begin{frame}{Methods: Sharing research}
+
+A \alert{version control system} keeps record of changes to code and makes the history of these changes visible to everybody. This enables control and attribution (who did what, when?), corrections and changes of course (get back to an earlier version!).
+
+A version control system implemented \alert{as a software development platform} accessible over the internet enables people to share code, to work together on it from different regions and time zones, to fix bugs, propose improvements etc. etc.
+
+\end{frame}
+
+\begin{frame}{Methods: Sharing research}
+
+This mode of operation makes programmers similar to scholars and scientists (although programmers work faster!). And scholars and scientists are aware of that.
+
+\end{frame}
+
+\begin{frame}{Methods: Sharing research}
+
+This mode of operation also enables \alert{replicability}, often left implicit in the humanities (``everybody who reads the book will, if clever enough, reach the same conclusions as I'').
+
+\end{frame}
+
 \section{Tools}
 
-\begin{frame}{Linguistic annotation}
+\begin{frame}{Tools: linguistic annotation}
 
 Arethusa / Perseids
 
 \end{frame}
 
-\begin{frame}{XML manipulation}
+\begin{frame}{Tools: XML manipulation}
 
 BaseX / XQuery
 
 \end{frame}
 
-\begin{frame}{Spaced repetition}
+\begin{frame}{Tools: spaced repetition}
 
 Anki
 
 \end{frame}
 
-\begin{frame}{Frequent words in (classical) Greek and Latin}
+\begin{frame}{Tools: frequent words in (classical) Greek and Latin}
 
 \alert{Dickinson College Core Vocabulary}
 
@@ -137,19 +190,27 @@ Anki
 
 \end{frame}
 
-\section{Creating the database}
+\begin{frame}{Tools: version control, publication, preservation}
 
-\begin{frame}{F1}
+\href{https://github.com/nevenjovanovic/sunoikisis2019zg-eklogai}{Github} / Zenodo (DOI \href{https://doi.org/10.5281/zenodo.3244011}{10.5281/zenodo.3244011})
+
 
 
 \end{frame}
 
-\section{Creating the exercises}
+\section{Results: creating the database}
+
+\begin{frame}[standout]
+
+
+\end{frame}
+
+\section{Results: creating the exercises}
 
 \begin{frame}{Exercise scenarios}
 
 1. For a word form, give the lemma (standard vocabulary entry):\\
-Q πράξεις, A πρᾶξις
+Q πράξεις – A πρᾶξις
 
 \end{frame}
 
@@ -157,27 +218,27 @@ Q πράξεις, A πρᾶξις
 
 
 2. For a word form, give the grammatical description:\\
-Q πράξεις, A noun, feminine, plural, nominative / accusative / vocative
+Q πράξεις – A noun, feminine, plural, nominative / accusative / vocative
 
 \end{frame}
 
 \begin{frame}{Exercise scenarios}
 
 3. For a lemma (of a word from the DC Greek core list), give the translation:\\
-Q ποταμός, A rijeka
+Q ποταμός – A rijeka
 
 \end{frame}
 
-\section{Demonstration (results)}
+\section{Results: running the scripts}
 
-\begin{frame}{F1}
+\begin{frame}[standout]
 
 
 \end{frame}
 
 \section{Discussion}
 
-\begin{frame}{F1}
+\begin{frame}[standout]
 
 
 \end{frame}
